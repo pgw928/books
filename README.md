@@ -14,3 +14,10 @@
 * [Better way 13, 14](./effective_python_2nd/13_14.md) : 슬라이싱 보다 모두를 잡는 `언패킹`(`*` 활용), `key parameter`
 * [Better way 16](./effective_python_2nd/16.md) :  `get`, `setdefault`
 
+
+
+#### 2. 이것이 MariaDB다
+
+* [3.3.3 스토어드 프로시저](./MariaDB/Stored_Procedure.md)
+
+* [3.3.4 트리거](./MariaDB/Trigger.md)
