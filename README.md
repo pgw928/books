@@ -14,7 +14,7 @@
 * [Better way 13, 14](./effective_python_2nd/13_14.md) : 슬라이싱 보다 모두를 잡는 `언패킹`(`*` 활용), `key parameter`
 * [Better way 16](./effective_python_2nd/16.md) :  `get`, `setdefault`
 
-* [Better way 27, 28, 29](./effective_python_2nd/27,28,29.ipynb) :  `get`, `setdefault`
+* [Better way 27, 28, 29](./effective_python_2nd/27,28,29.ipynb) :  `comprehension`
 
 
 
