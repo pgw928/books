@@ -1,6 +1,6 @@
-# 6.1 SELECT 문
+# 6.1 SELECT 문(1)
 
-> 가장 기본적인 `SELECT 열이름 FROM 테이블이름 WHERE 조건` 에 살을 붙여가며 `SELECT`문을 정복하자.
+> 가장 기본적인 `SELECT 열이름 FROM 테이블이름 WHERE 조건` 에 살을 붙여가며 `SELECT`문을 정복한다.
 
 
 
@@ -33,8 +33,6 @@ SELECT * FROM titles ; -- titles 테이블에서 모든 열의 내용을 가져�
 
 * `*` : 모든 것 , 모든 열을 의미, 특정한 열을 얻으려면 이 위치에 얻고 싶은 열을 입력하면 된다.
 * `FROM` :  다음으로 테이블/뷰 등의 항목이 나온다.
-
-
 
 
 
@@ -115,3 +113,61 @@ SELECT first_name, gender FROM employees;
 ```
 
 ![image-20210113220345271](markdown-images/image-20210113220345271.png)
+
+
+
+
+
+## 계속 사용할 데이터 베이스 만들어두기
+
+```mariadb
+DROP DATABASE IF EXISTS sqlDB;
+CREATE DATABASE sqlDB;
+
+USE SQLdb;
+CREATE TABLE userTBL
+(userID CHAR(8) NOT NULL PRIMARY KEY,
+ NAME VARCHAR(10) NOT NULL,
+ birthYear INT NOT NULL,
+ addr CHAR(2) NOT NULL,
+ mobile1 CHAR(3),
+ mobile2 CHAR(8),
+ height SMALLINT,
+ mDate DATE 
+);
+CREATE TABLE buyTbl
+(num INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+ userID CHAR(8) NOT NULL,
+ prodName CHAR(6) NOT NULL,
+ groupName CHAR(4),
+ price INT NOT NULL,
+ amount SMALLINT NOT NULL,
+ FOREIGN KEY (userID) REFERENCES userTBL(userID)
+);
+
+INSERT INTO usertbl VALUES('LSG', n'이승기', 1987, n'서울', '011', '11111111', 182, '2008-8-8');
+INSERT INTO usertbl VALUES('KBS', n'김범수', 1979, n'경남', '011', '22222222', 173, '2012-4-4');
+INSERT INTO usertbl VALUES('KKH', n'김경호', 1971, n'전남', '019', '33333333', 177, '2007-7-7');
+INSERT INTO usertbl VALUES('JYP', n'조용필', 1950, n'경기', '011', '44444444', 166, '2009-4-4');
+INSERT INTO usertbl VALUES('SSK', n'성시경', 1979, n'서울', NULL, NULL, 186, '2013-12-12');
+INSERT INTO usertbl VALUES('LJB', n'임재범', 1963, n'서울', '016', '66666666', 182, '2009-9-9');
+INSERT INTO usertbl VALUES('YJS', n'윤종신', 1969, n'경남', NULL, NULL, 170, '2005-5-5');
+INSERT INTO usertbl VALUES('EJW', n'은지원', 1972, n'경북', '011', '88888888', 174, '2014-3-3');
+INSERT INTO usertbl VALUES('JKW', n'조관우', 1965, n'경기', '018', '99999999', 172, '2012-10-10');
+INSERT INTO usertbl VALUES('BBK', n'바비킴', 1973, n'서울', '010', '00000000', 176, '2013-5-5');
+INSERT INTO buytbl VALUES(NULL, 'KBS', N'운동화', NULL,    30, 2);
+INSERT INTO buytbl VALUES(NULL, 'KBS', N'노트북', N'전자', 1000, 1);
+INSERT INTO buytbl VALUES(NULL, 'JYP', N'모니터', N'전자', 200, 1);
+INSERT INTO buytbl VALUES(NULL, 'BBK', N'모니터', N'전자', 200, 5);
+INSERT INTO buytbl VALUES(NULL, 'KBS', N'청바지', N'의류', 50, 3);
+INSERT INTO buytbl VALUES(NULL, 'BBK', N'메모리', N'전자', 80, 10);
+INSERT INTO buytbl VALUES(NULL, 'SSK', N'책',     N'서저', 15, 5);
+INSERT INTO buytbl VALUES(NULL, 'EJW', N'책',     N'서적', 15, 2);
+INSERT INTO buytbl VALUES(NULL, 'EJW', N'청바지', N'의류', 50, 1);
+INSERT INTO buytbl VALUES(NULL, 'BBK', N'운동화', NULL,    30, 2);
+INSERT INTO buytbl VALUES(NULL, 'EJW', N'책',     N'서적', 15, 1);
+INSERT INTO buytbl VALUES(NULL, 'BBK', N'운동화', NULL,    30, 2);
+```
+
+
+

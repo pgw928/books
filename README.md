@@ -23,5 +23,6 @@
 * [3.3.3 스토어드 프로시저](./MariaDB/Stored_Procedure.md)
 * [3.3.4 트리거](./MariaDB/Trigger.md)
 * [4.1 프로젝트의 진행 단계](./MariaDB/4_1.md)
-
-* [6.1 SELECT 구문](./MariaDB/SELECT.md)
+* [6.1 SELECT 구문(1)](./MariaDB/SELECT.md)
+* [6.1 SELECT 구문(2)](./MariaDB/SELECT2.md)
+* [6.1 SELECT 구문(3)](./MariaDB/SELECT3.md)
