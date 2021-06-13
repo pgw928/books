@@ -103,7 +103,7 @@
 
 ## ROLLUP
 
-> 총합 또는 중간 합계가 필요하면 `GROUP BY`절과 `WITH ROLLUP`문을 사용하면 된다. 추ㄱ 
+> 총합 또는 중간 합계가 필요하면 `GROUP BY`절과 `WITH ROLLUP`문을 사용하면 된다.
 
 * 예제 : 분류(groupname)별로 합계 및 총합을 구하고 싶을 때 사용한다. 
 
